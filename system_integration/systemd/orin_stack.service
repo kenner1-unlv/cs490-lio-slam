@@ -1,0 +1,19 @@
+[Unit]
+Description=Orin robot stack
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=sauce
+WorkingDirectory=/data
+ExecStart=/data/orin_stack
+Restart=no
+RestartSec=1
+Environment=RMW_IMPLEMENTATION=rmw_fastrtps_cpp
+Environment=ROS_DOMAIN_ID=0
+Environment=CYCLONEDDS_URI=
+Environment=FASTRTPS_DEFAULT_PROFILES_FILE=
+
+[Install]
+WantedBy=multi-user.target

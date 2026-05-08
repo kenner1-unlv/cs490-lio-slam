@@ -1,0 +1,86 @@
+#!/usr/bin/env bash
+set -u -o pipefail
+set +o errexit  # ensure -e is OFF (and stays OFF)
+
+# ---------- logging ----------
+LOGDIR="/data/log/orin_stack"
+mkdir -p "$LOGDIR"
+
+RUN_ID="$(date +%F_%H-%M-%S)"
+RUN_LOG="$LOGDIR/orin_stack_${RUN_ID}.log"
+ln -sfn "$RUN_LOG" "$LOGDIR/current.log"
+
+FOREVER_LOG="$LOGDIR/all.log"
+exec > >(stdbuf -oL -eL tee -a "$RUN_LOG" -a "$FOREVER_LOG") 2>&1
+
+log() { echo "[orin_stack] $(date '+%F %T') $*"; }
+log "logfile: $RUN_LOG"
+
+PIDS=()
+
+cleanup() {
+  log "TERM received, stopping..."
+  for pid in "${PIDS[@]:-}"; do
+    kill -TERM "$pid" 2>/dev/null || true
+  done
+
+  # Give launches a moment to shutdown cleanly
+  for _ in $(seq 1 30); do
+    alive=0
+    for pid in "${PIDS[@]:-}"; do
+      kill -0 "$pid" 2>/dev/null && alive=1
+    done
+    [ "$alive" -eq 0 ] && break
+    sleep 0.2
+  done
+
+  # Hard kill anything still alive
+  for pid in "${PIDS[@]:-}"; do
+    kill -0 "$pid" 2>/dev/null && kill -KILL "$pid" 2>/dev/null || true
+  done
+
+  log "Stopped."
+  exit 0
+}
+
+trap cleanup TERM INT
+
+# ---------- source ROS (nounset-safe) ----------
+# ---------- source ROS (nounset-safe) ----------
+set +u
+source /opt/ros/humble/setup.bash
+set -u
+set +o errexit  # in case setup.bash toggled it
+
+# ---------- ROS middleware ----------
+export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
+export ROS_DOMAIN_ID=0
+log "RMW_IMPLEMENTATION=$RMW_IMPLEMENTATION ROS_DOMAIN_ID=$ROS_DOMAIN_ID"
+
+# ---- source all modules (fail-soft per module) ----
+for f in /data/orin_start.d/*.sh; do
+  [ -e "$f" ] || continue
+  log "sourcing $f"
+
+  # source in current shell so modules can push into PIDS[]
+  set +u
+  # shellcheck disable=SC1090
+  source "$f"
+  rc=$?
+  set -u
+
+  # force baseline options back, in case module did `set -euo pipefail`
+  set +o errexit
+  set -o pipefail
+
+  if [ $rc -ne 0 ]; then
+    log "WARN: module failed rc=$rc: $f"
+  fi
+done
+
+log "Starting nodes... PIDs: ${PIDS[*]:-none}"
+
+# Keep the service alive (wait on all child jobs started by modules)
+while true; do
+  sleep 1
+done
