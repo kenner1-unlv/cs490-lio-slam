@@ -1,0 +1,14 @@
+[Unit]
+Description=RDK Robot Sensor Stack
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=sunrise
+WorkingDirectory=/home/sunrise
+ExecStart=/home/sunrise/rdk_stack
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,642 @@
+[tof_bridge] checking serial sensors
+/opt/ros/humble/setup.bash: line 8: AMENT_TRACE_SETUP_FILES: unbound variable
+[tof_bridge] checking serial sensors
+[tof_bridge] starting
+[INFO] [1777957413.462100075] [tof_bridge]: Reading /dev/ttyUSB0 as tof_front_right
+[INFO] [1777957413.470286658] [tof_bridge]: Reading /dev/ttyUSB1 as tof_front_left
+Traceback (most recent call last):
+  File "/home/sunrise/tof_bridge.py", line 100, in <module>
+    main()
+  File "/home/sunrise/tof_bridge.py", line 95, in main
+    rclpy.spin(node)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py", line 226, in spin
+    executor.spin_once()
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 739, in spin_once
+    self._spin_once_impl(timeout_sec)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 736, in _spin_once_impl
+    raise handler.exception()
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/task.py", line 239, in __call__
+    self._handler.send(None)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 437, in handler
+    await call_coroutine(entity, arg)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 351, in _execute_timer
+    await await_or_execute(tmr.callback)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 107, in await_or_execute
+    return callback(*args)
+  File "/home/sunrise/tof_bridge.py", line 54, in loop
+    line = sensor["ser"].readline().decode(errors="ignore").strip()
+  File "/usr/lib/python3/dist-packages/serial/serialposix.py", line 595, in read
+    raise SerialException(
+serial.serialutil.SerialException: device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+[tof_bridge] checking serial sensors
+[tof_bridge] starting
+[INFO] [1777957548.283018467] [tof_bridge]: Reading /dev/ttyUSB0 as tof_front_right
+[INFO] [1777957548.291336197] [tof_bridge]: Reading /dev/ttyUSB1 as tof_front_left
+Traceback (most recent call last):
+  File "/home/sunrise/tof_bridge.py", line 100, in <module>
+    main()
+  File "/home/sunrise/tof_bridge.py", line 95, in main
+    rclpy.spin(node)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py", line 226, in spin
+    executor.spin_once()
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 739, in spin_once
+    self._spin_once_impl(timeout_sec)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 736, in _spin_once_impl
+    raise handler.exception()
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/task.py", line 239, in __call__
+    self._handler.send(None)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 437, in handler
+    await call_coroutine(entity, arg)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 351, in _execute_timer
+    await await_or_execute(tmr.callback)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 107, in await_or_execute
+    return callback(*args)
+  File "/home/sunrise/tof_bridge.py", line 54, in loop
+    line = sensor["ser"].readline().decode(errors="ignore").strip()
+  File "/usr/lib/python3/dist-packages/serial/serialposix.py", line 595, in read
+    raise SerialException(
+serial.serialutil.SerialException: device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+[tof_bridge] checking serial sensors
+[tof_bridge] starting
+[INFO] [1777958265.815558235] [tof_bridge]: Reading /dev/ttyUSB0 as tof_front_right
+[INFO] [1777958265.823502365] [tof_bridge]: Reading /dev/ttyUSB1 as tof_front_left
+Traceback (most recent call last):
+  File "/home/sunrise/tof_bridge.py", line 100, in <module>
+    main()
+  File "/home/sunrise/tof_bridge.py", line 95, in main
+    rclpy.spin(node)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py", line 226, in spin
+    executor.spin_once()
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 739, in spin_once
+    self._spin_once_impl(timeout_sec)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 736, in _spin_once_impl
+    raise handler.exception()
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/task.py", line 239, in __call__
+    self._handler.send(None)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 437, in handler
+    await call_coroutine(entity, arg)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 351, in _execute_timer
+    await await_or_execute(tmr.callback)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 107, in await_or_execute
+    return callback(*args)
+  File "/home/sunrise/tof_bridge.py", line 54, in loop
+    line = sensor["ser"].readline().decode(errors="ignore").strip()
+  File "/usr/lib/python3/dist-packages/serial/serialposix.py", line 595, in read
+    raise SerialException(
+serial.serialutil.SerialException: device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+[tof_bridge] checking serial sensors
+[tof_bridge] starting
+[INFO] [1777960225.349238919] [tof_bridge]: Reading /dev/ttyUSB0 as tof_front_left
+[INFO] [1777960225.359281302] [tof_bridge]: Reading /dev/ttyUSB1 as tof_front_right
+Traceback (most recent call last):
+  File "/home/sunrise/tof_bridge.py", line 100, in <module>
+    main()
+  File "/home/sunrise/tof_bridge.py", line 95, in main
+    rclpy.spin(node)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py", line 226, in spin
+    executor.spin_once()
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 739, in spin_once
+    self._spin_once_impl(timeout_sec)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 736, in _spin_once_impl
+    raise handler.exception()
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/task.py", line 239, in __call__
+    self._handler.send(None)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 437, in handler
+    await call_coroutine(entity, arg)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 351, in _execute_timer
+    await await_or_execute(tmr.callback)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 107, in await_or_execute
+    return callback(*args)
+  File "/home/sunrise/tof_bridge.py", line 54, in loop
+    line = sensor["ser"].readline().decode(errors="ignore").strip()
+  File "/usr/lib/python3/dist-packages/serial/serialposix.py", line 595, in read
+    raise SerialException(
+serial.serialutil.SerialException: device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+[tof_bridge] checking serial sensors
+[tof_bridge] starting
+[INFO] [1777960281.018912832] [tof_bridge]: Reading /dev/ttyUSB0 as tof_front_left
+[INFO] [1777960281.027696718] [tof_bridge]: Reading /dev/ttyUSB1 as tof_front_right
+Traceback (most recent call last):
+  File "/home/sunrise/tof_bridge.py", line 100, in <module>
+    main()
+  File "/home/sunrise/tof_bridge.py", line 95, in main
+    rclpy.spin(node)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py", line 226, in spin
+    executor.spin_once()
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 739, in spin_once
+    self._spin_once_impl(timeout_sec)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 736, in _spin_once_impl
+    raise handler.exception()
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/task.py", line 239, in __call__
+    self._handler.send(None)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 437, in handler
+    await call_coroutine(entity, arg)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 351, in _execute_timer
+    await await_or_execute(tmr.callback)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 107, in await_or_execute
+    return callback(*args)
+  File "/home/sunrise/tof_bridge.py", line 54, in loop
+    line = sensor["ser"].readline().decode(errors="ignore").strip()
+  File "/usr/lib/python3/dist-packages/serial/serialposix.py", line 595, in read
+    raise SerialException(
+serial.serialutil.SerialException: device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+[tof_bridge] checking serial sensors
+[tof_bridge] starting
+[INFO] [1777960528.749884921] [tof_bridge]: Reading /dev/ttyUSB0 as tof_front_left
+[INFO] [1777960528.758754305] [tof_bridge]: Reading /dev/ttyUSB1 as tof_front_right
+Traceback (most recent call last):
+  File "/home/sunrise/tof_bridge.py", line 100, in <module>
+    main()
+  File "/home/sunrise/tof_bridge.py", line 95, in main
+    rclpy.spin(node)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py", line 226, in spin
+    executor.spin_once()
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 739, in spin_once
+    self._spin_once_impl(timeout_sec)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 736, in _spin_once_impl
+    raise handler.exception()
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/task.py", line 239, in __call__
+    self._handler.send(None)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 437, in handler
+    await call_coroutine(entity, arg)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 351, in _execute_timer
+    await await_or_execute(tmr.callback)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 107, in await_or_execute
+    return callback(*args)
+  File "/home/sunrise/tof_bridge.py", line 54, in loop
+    line = sensor["ser"].readline().decode(errors="ignore").strip()
+  File "/usr/lib/python3/dist-packages/serial/serialposix.py", line 595, in read
+    raise SerialException(
+serial.serialutil.SerialException: device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+[tof_bridge] checking serial sensors
+[tof_bridge] starting
+[INFO] [1777960687.105992812] [tof_bridge]: Reading /dev/ttyUSB0 as tof_front_left
+[INFO] [1777960687.115201485] [tof_bridge]: Reading /dev/ttyUSB1 as tof_front_right
+Traceback (most recent call last):
+  File "/home/sunrise/tof_bridge.py", line 100, in <module>
+    main()
+  File "/home/sunrise/tof_bridge.py", line 95, in main
+    rclpy.spin(node)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py", line 226, in spin
+    executor.spin_once()
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 739, in spin_once
+    self._spin_once_impl(timeout_sec)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 736, in _spin_once_impl
+    raise handler.exception()
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/task.py", line 239, in __call__
+    self._handler.send(None)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 437, in handler
+    await call_coroutine(entity, arg)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 351, in _execute_timer
+    await await_or_execute(tmr.callback)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 107, in await_or_execute
+    return callback(*args)
+  File "/home/sunrise/tof_bridge.py", line 54, in loop
+    line = sensor["ser"].readline().decode(errors="ignore").strip()
+  File "/usr/lib/python3/dist-packages/serial/serialposix.py", line 595, in read
+    raise SerialException(
+serial.serialutil.SerialException: device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+[tof_bridge] checking serial sensors
+[tof_bridge] starting
+[INFO] [1777960766.738245490] [tof_bridge]: Reading /dev/ttyUSB0 as tof_front_left
+[INFO] [1777960766.747351579] [tof_bridge]: Reading /dev/ttyUSB1 as tof_front_right
+Traceback (most recent call last):
+  File "/home/sunrise/tof_bridge.py", line 100, in <module>
+    main()
+  File "/home/sunrise/tof_bridge.py", line 95, in main
+    rclpy.spin(node)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py", line 226, in spin
+    executor.spin_once()
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 739, in spin_once
+    self._spin_once_impl(timeout_sec)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 736, in _spin_once_impl
+    raise handler.exception()
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/task.py", line 239, in __call__
+    self._handler.send(None)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 437, in handler
+    await call_coroutine(entity, arg)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 351, in _execute_timer
+    await await_or_execute(tmr.callback)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 107, in await_or_execute
+    return callback(*args)
+  File "/home/sunrise/tof_bridge.py", line 54, in loop
+    line = sensor["ser"].readline().decode(errors="ignore").strip()
+  File "/usr/lib/python3/dist-packages/serial/serialposix.py", line 595, in read
+    raise SerialException(
+serial.serialutil.SerialException: device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+[tof_bridge] checking serial sensors
+[tof_bridge] starting
+[INFO] [1777960849.644867201] [tof_bridge]: Reading /dev/ttyUSB0 as tof_front_left
+[INFO] [1777960849.654275288] [tof_bridge]: Reading /dev/ttyUSB1 as tof_front_right
+Traceback (most recent call last):
+  File "/home/sunrise/tof_bridge.py", line 100, in <module>
+    main()
+  File "/home/sunrise/tof_bridge.py", line 95, in main
+    rclpy.spin(node)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py", line 226, in spin
+    executor.spin_once()
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 739, in spin_once
+    self._spin_once_impl(timeout_sec)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 736, in _spin_once_impl
+    raise handler.exception()
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/task.py", line 239, in __call__
+    self._handler.send(None)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 437, in handler
+    await call_coroutine(entity, arg)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 351, in _execute_timer
+    await await_or_execute(tmr.callback)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 107, in await_or_execute
+    return callback(*args)
+  File "/home/sunrise/tof_bridge.py", line 54, in loop
+    line = sensor["ser"].readline().decode(errors="ignore").strip()
+  File "/usr/lib/python3/dist-packages/serial/serialposix.py", line 595, in read
+    raise SerialException(
+serial.serialutil.SerialException: device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+[tof_bridge] checking serial sensors
+[tof_bridge] starting
+[INFO] [1777960913.148119958] [tof_bridge]: Reading /dev/ttyUSB0 as tof_front_left
+[INFO] [1777960913.158651041] [tof_bridge]: Reading /dev/ttyUSB1 as tof_front_right
+Traceback (most recent call last):
+  File "/home/sunrise/tof_bridge.py", line 100, in <module>
+    main()
+  File "/home/sunrise/tof_bridge.py", line 95, in main
+    rclpy.spin(node)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py", line 226, in spin
+    executor.spin_once()
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 739, in spin_once
+    self._spin_once_impl(timeout_sec)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 736, in _spin_once_impl
+    raise handler.exception()
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/task.py", line 239, in __call__
+    self._handler.send(None)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 437, in handler
+    await call_coroutine(entity, arg)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 351, in _execute_timer
+    await await_or_execute(tmr.callback)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 107, in await_or_execute
+    return callback(*args)
+  File "/home/sunrise/tof_bridge.py", line 54, in loop
+    line = sensor["ser"].readline().decode(errors="ignore").strip()
+  File "/usr/lib/python3/dist-packages/serial/serialposix.py", line 595, in read
+    raise SerialException(
+serial.serialutil.SerialException: device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+[tof_bridge] checking serial sensors
+[tof_bridge] starting
+[INFO] [1777960999.362569571] [tof_bridge]: Reading /dev/ttyUSB0 as tof_front_left
+[INFO] [1777960999.371780742] [tof_bridge]: Reading /dev/ttyUSB1 as tof_front_right
+Traceback (most recent call last):
+  File "/home/sunrise/tof_bridge.py", line 100, in <module>
+    main()
+  File "/home/sunrise/tof_bridge.py", line 95, in main
+    rclpy.spin(node)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py", line 226, in spin
+    executor.spin_once()
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 739, in spin_once
+    self._spin_once_impl(timeout_sec)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 736, in _spin_once_impl
+    raise handler.exception()
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/task.py", line 239, in __call__
+    self._handler.send(None)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 437, in handler
+    await call_coroutine(entity, arg)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 351, in _execute_timer
+    await await_or_execute(tmr.callback)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 107, in await_or_execute
+    return callback(*args)
+  File "/home/sunrise/tof_bridge.py", line 54, in loop
+    line = sensor["ser"].readline().decode(errors="ignore").strip()
+  File "/usr/lib/python3/dist-packages/serial/serialposix.py", line 595, in read
+    raise SerialException(
+serial.serialutil.SerialException: device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+[tof_bridge] checking serial sensors
+[tof_bridge] starting
+[INFO] [1777961089.164770546] [tof_bridge]: Reading /dev/ttyUSB0 as tof_front_left
+[INFO] [1777961089.173696343] [tof_bridge]: Reading /dev/ttyUSB1 as tof_front_right
+Traceback (most recent call last):
+  File "/home/sunrise/tof_bridge.py", line 100, in <module>
+    main()
+  File "/home/sunrise/tof_bridge.py", line 95, in main
+    rclpy.spin(node)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py", line 226, in spin
+    executor.spin_once()
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 739, in spin_once
+    self._spin_once_impl(timeout_sec)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 736, in _spin_once_impl
+    raise handler.exception()
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/task.py", line 239, in __call__
+    self._handler.send(None)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 437, in handler
+    await call_coroutine(entity, arg)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 351, in _execute_timer
+    await await_or_execute(tmr.callback)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 107, in await_or_execute
+    return callback(*args)
+  File "/home/sunrise/tof_bridge.py", line 54, in loop
+    line = sensor["ser"].readline().decode(errors="ignore").strip()
+  File "/usr/lib/python3/dist-packages/serial/serialposix.py", line 595, in read
+    raise SerialException(
+serial.serialutil.SerialException: device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+[tof_bridge] checking serial sensors
+[tof_bridge] starting
+[INFO] [1777961345.308370320] [tof_bridge]: Reading /dev/ttyUSB0 as tof_front_left
+[INFO] [1777961345.319425982] [tof_bridge]: Reading /dev/ttyUSB1 as tof_front_right
+Traceback (most recent call last):
+  File "/home/sunrise/tof_bridge.py", line 100, in <module>
+    main()
+  File "/home/sunrise/tof_bridge.py", line 95, in main
+    rclpy.spin(node)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py", line 226, in spin
+    executor.spin_once()
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 739, in spin_once
+    self._spin_once_impl(timeout_sec)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 736, in _spin_once_impl
+    raise handler.exception()
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/task.py", line 239, in __call__
+    self._handler.send(None)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 437, in handler
+    await call_coroutine(entity, arg)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 351, in _execute_timer
+    await await_or_execute(tmr.callback)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 107, in await_or_execute
+    return callback(*args)
+  File "/home/sunrise/tof_bridge.py", line 54, in loop
+    line = sensor["ser"].readline().decode(errors="ignore").strip()
+  File "/usr/lib/python3/dist-packages/serial/serialposix.py", line 595, in read
+    raise SerialException(
+serial.serialutil.SerialException: device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+[tof_bridge] checking serial sensors
+[tof_bridge] starting
+[INFO] [1778010771.509518121] [tof_bridge]: Reading /dev/ttyUSB0 as tof_front_left
+[INFO] [1778010771.538319857] [tof_bridge]: Reading /dev/ttyUSB1 as tof_front_right
+[tof_bridge] checking serial sensors
+[tof_bridge] starting
+[INFO] [0946684840.911080315] [tof_bridge]: Reading /dev/ttyUSB0 as tof_front_left
+[INFO] [0946684840.944612278] [tof_bridge]: Reading /dev/ttyUSB1 as tof_front_right
+[tof_bridge] checking serial sensors
+[tof_bridge] starting
+
+>>> [rcutils|error_handling.c:108] rcutils_set_error_state()
+This error state is being overwritten:
+
+  'Fast CDR exception deserializing message of type rmw_dds_common::msg::dds_::ParticipantEntitiesInfo_., at ./src/type_support_common.cpp:118'
+
+with this new error message:
+
+  ''Bad alloc' exception deserializing message of type rmw_dds_common::msg::dds_::ParticipantEntitiesInfo_., at ./src/type_support_common.cpp:123'
+
+rcutils_reset_error() should be called after error handling to avoid this.
+<<<
+[INFO] [1778049986.413283798] [tof_bridge]: Reading /dev/ttyUSB0 as tof_front_left
+[INFO] [1778049986.422476724] [tof_bridge]: Reading /dev/ttyUSB1 as tof_front_right
+Traceback (most recent call last):
+  File "/home/sunrise/tof_bridge.py", line 100, in <module>
+    main()
+  File "/home/sunrise/tof_bridge.py", line 97, in main
+    rclpy.shutdown()
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py", line 130, in shutdown
+    _shutdown(context=context)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/utilities.py", line 58, in shutdown
+    return context.shutdown()
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/context.py", line 102, in shutdown
+    self.__context.shutdown()
+rclpy._rclpy_pybind11.RCLError: failed to shutdown: rcl_shutdown already called on the given context, at ./src/rcl/init.c:241
+[tof_bridge] checking serial sensors
+[tof_bridge] starting
+
+>>> [rcutils|error_handling.c:108] rcutils_set_error_state()
+This error state is being overwritten:
+
+  'Fast CDR exception deserializing message of type rmw_dds_common::msg::dds_::ParticipantEntitiesInfo_., at ./src/type_support_common.cpp:118'
+
+with this new error message:
+
+  ''Bad alloc' exception deserializing message of type rmw_dds_common::msg::dds_::ParticipantEntitiesInfo_., at ./src/type_support_common.cpp:123'
+
+rcutils_reset_error() should be called after error handling to avoid this.
+<<<
+[INFO] [1778050151.545158210] [tof_bridge]: Reading /dev/ttyUSB0 as tof_front_left
+[INFO] [1778050151.575744288] [tof_bridge]: Reading /dev/ttyUSB1 as tof_front_right
+Traceback (most recent call last):
+  File "/home/sunrise/tof_bridge.py", line 100, in <module>
+    main()
+  File "/home/sunrise/tof_bridge.py", line 95, in main
+    rclpy.spin(node)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py", line 226, in spin
+    executor.spin_once()
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 739, in spin_once
+    self._spin_once_impl(timeout_sec)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 728, in _spin_once_impl
+    handler, entity, node = self.wait_for_ready_callbacks(timeout_sec=timeout_sec)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 711, in wait_for_ready_callbacks
+    return next(self._cb_iter)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 584, in _wait_for_ready_callbacks
+    wait_set = _rclpy.WaitSet(
+rclpy._rclpy_pybind11.RCLError: failed to initialize wait set: the given context is not valid, either rcl_init() was not called or rcl_shutdown() was called., at ./src/rcl/wait.c:130
+[tof_bridge] checking serial sensors
+[tof_bridge] starting
+
+>>> [rcutils|error_handling.c:108] rcutils_set_error_state()
+This error state is being overwritten:
+
+  'Fast CDR exception deserializing message of type rmw_dds_common::msg::dds_::ParticipantEntitiesInfo_., at ./src/type_support_common.cpp:118'
+
+with this new error message:
+
+  ''Bad alloc' exception deserializing message of type rmw_dds_common::msg::dds_::ParticipantEntitiesInfo_., at ./src/type_support_common.cpp:123'
+
+rcutils_reset_error() should be called after error handling to avoid this.
+<<<
+[INFO] [1778050178.871138274] [tof_bridge]: Reading /dev/ttyUSB0 as tof_front_left
+[INFO] [1778050178.881384911] [tof_bridge]: Reading /dev/ttyUSB1 as tof_front_right
+Traceback (most recent call last):
+  File "/home/sunrise/tof_bridge.py", line 100, in <module>
+    main()
+  File "/home/sunrise/tof_bridge.py", line 95, in main
+    rclpy.spin(node)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py", line 226, in spin
+    executor.spin_once()
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 739, in spin_once
+    self._spin_once_impl(timeout_sec)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 728, in _spin_once_impl
+    handler, entity, node = self.wait_for_ready_callbacks(timeout_sec=timeout_sec)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 711, in wait_for_ready_callbacks
+    return next(self._cb_iter)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 584, in _wait_for_ready_callbacks
+    wait_set = _rclpy.WaitSet(
+rclpy._rclpy_pybind11.RCLError: failed to initialize wait set: the given context is not valid, either rcl_init() was not called or rcl_shutdown() was called., at ./src/rcl/wait.c:130
+[tof_bridge] checking serial sensors
+[tof_bridge] starting
+
+>>> [rcutils|error_handling.c:108] rcutils_set_error_state()
+This error state is being overwritten:
+
+  'Fast CDR exception deserializing message of type rmw_dds_common::msg::dds_::ParticipantEntitiesInfo_., at ./src/type_support_common.cpp:118'
+
+with this new error message:
+
+  ''Bad alloc' exception deserializing message of type rmw_dds_common::msg::dds_::ParticipantEntitiesInfo_., at ./src/type_support_common.cpp:123'
+
+rcutils_reset_error() should be called after error handling to avoid this.
+<<<
+[INFO] [1778050290.154158524] [tof_bridge]: Reading /dev/ttyUSB0 as tof_front_left
+[INFO] [1778050290.164941932] [tof_bridge]: Reading /dev/ttyUSB1 as tof_front_right
+Traceback (most recent call last):
+  File "/home/sunrise/tof_bridge.py", line 100, in <module>
+    main()
+  File "/home/sunrise/tof_bridge.py", line 95, in main
+    rclpy.spin(node)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py", line 226, in spin
+    executor.spin_once()
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 739, in spin_once
+    self._spin_once_impl(timeout_sec)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 736, in _spin_once_impl
+    raise handler.exception()
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/task.py", line 239, in __call__
+    self._handler.send(None)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 437, in handler
+    await call_coroutine(entity, arg)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 351, in _execute_timer
+    await await_or_execute(tmr.callback)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 107, in await_or_execute
+    return callback(*args)
+  File "/home/sunrise/tof_bridge.py", line 79, in loop
+    sensor["pub_tof"].publish(msg)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/publisher.py", line 70, in publish
+    self.__publisher.publish(msg)
+rclpy._rclpy_pybind11.RCLError: Failed to publish: publisher's context is invalid, at ./src/rcl/publisher.c:389
+[tof_bridge] checking serial sensors
+[tof_bridge] starting
+
+>>> [rcutils|error_handling.c:108] rcutils_set_error_state()
+This error state is being overwritten:
+
+  ''Bad alloc' exception deserializing message of type rmw_dds_common::msg::dds_::ParticipantEntitiesInfo_., at ./src/type_support_common.cpp:123'
+
+with this new error message:
+
+  'Fast CDR exception deserializing message of type rmw_dds_common::msg::dds_::ParticipantEntitiesInfo_., at ./src/type_support_common.cpp:118'
+
+rcutils_reset_error() should be called after error handling to avoid this.
+<<<
+[INFO] [1778050308.554801863] [tof_bridge]: Reading /dev/ttyUSB0 as tof_front_left
+[INFO] [1778050308.564762768] [tof_bridge]: Reading /dev/ttyUSB1 as tof_front_right
+Traceback (most recent call last):
+  File "/home/sunrise/tof_bridge.py", line 100, in <module>
+    main()
+  File "/home/sunrise/tof_bridge.py", line 95, in main
+    rclpy.spin(node)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py", line 226, in spin
+    executor.spin_once()
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 739, in spin_once
+    self._spin_once_impl(timeout_sec)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 736, in _spin_once_impl
+    raise handler.exception()
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/task.py", line 239, in __call__
+    self._handler.send(None)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 437, in handler
+    await call_coroutine(entity, arg)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 351, in _execute_timer
+    await await_or_execute(tmr.callback)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 107, in await_or_execute
+    return callback(*args)
+  File "/home/sunrise/tof_bridge.py", line 79, in loop
+    sensor["pub_tof"].publish(msg)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/publisher.py", line 70, in publish
+    self.__publisher.publish(msg)
+rclpy._rclpy_pybind11.RCLError: Failed to publish: publisher's context is invalid, at ./src/rcl/publisher.c:389
+[tof_bridge] checking serial sensors
+[tof_bridge] starting
+
+>>> [rcutils|error_handling.c:108] rcutils_set_error_state()
+This error state is being overwritten:
+
+  'Fast CDR exception deserializing message of type rmw_dds_common::msg::dds_::ParticipantEntitiesInfo_., at ./src/type_support_common.cpp:118'
+
+with this new error message:
+
+  ''Bad alloc' exception deserializing message of type rmw_dds_common::msg::dds_::ParticipantEntitiesInfo_., at ./src/type_support_common.cpp:123'
+
+rcutils_reset_error() should be called after error handling to avoid this.
+<<<
+[INFO] [1778050335.104178371] [tof_bridge]: Reading /dev/ttyUSB0 as tof_front_left
+[INFO] [1778050335.115168466] [tof_bridge]: Reading /dev/ttyUSB1 as tof_front_right
+Traceback (most recent call last):
+  File "/home/sunrise/tof_bridge.py", line 100, in <module>
+    main()
+  File "/home/sunrise/tof_bridge.py", line 95, in main
+    rclpy.spin(node)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py", line 226, in spin
+    executor.spin_once()
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 739, in spin_once
+    self._spin_once_impl(timeout_sec)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 736, in _spin_once_impl
+    raise handler.exception()
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/task.py", line 239, in __call__
+    self._handler.send(None)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 437, in handler
+    await call_coroutine(entity, arg)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 351, in _execute_timer
+    await await_or_execute(tmr.callback)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 107, in await_or_execute
+    return callback(*args)
+  File "/home/sunrise/tof_bridge.py", line 79, in loop
+    sensor["pub_tof"].publish(msg)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/publisher.py", line 70, in publish
+    self.__publisher.publish(msg)
+rclpy._rclpy_pybind11.RCLError: Failed to publish: publisher's context is invalid, at ./src/rcl/publisher.c:389
+[tof_bridge] checking serial sensors
+[tof_bridge] starting
+
+>>> [rcutils|error_handling.c:108] rcutils_set_error_state()
+This error state is being overwritten:
+
+  ''Bad alloc' exception deserializing message of type rmw_dds_common::msg::dds_::ParticipantEntitiesInfo_., at ./src/type_support_common.cpp:123'
+
+with this new error message:
+
+  'Fast CDR exception deserializing message of type rmw_dds_common::msg::dds_::ParticipantEntitiesInfo_., at ./src/type_support_common.cpp:118'
+
+rcutils_reset_error() should be called after error handling to avoid this.
+<<<
+[INFO] [1778050357.841444011] [tof_bridge]: Reading /dev/ttyUSB0 as tof_front_left
+[INFO] [1778050357.853218684] [tof_bridge]: Reading /dev/ttyUSB1 as tof_front_right
+Traceback (most recent call last):
+  File "/home/sunrise/tof_bridge.py", line 100, in <module>
+    main()
+  File "/home/sunrise/tof_bridge.py", line 95, in main
+    rclpy.spin(node)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/__init__.py", line 226, in spin
+    executor.spin_once()
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 739, in spin_once
+    self._spin_once_impl(timeout_sec)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 736, in _spin_once_impl
+    raise handler.exception()
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/task.py", line 239, in __call__
+    self._handler.send(None)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 437, in handler
+    await call_coroutine(entity, arg)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 351, in _execute_timer
+    await await_or_execute(tmr.callback)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/executors.py", line 107, in await_or_execute
+    return callback(*args)
+  File "/home/sunrise/tof_bridge.py", line 79, in loop
+    sensor["pub_tof"].publish(msg)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/publisher.py", line 70, in publish
+    self.__publisher.publish(msg)
+rclpy._rclpy_pybind11.RCLError: Failed to publish: publisher's context is invalid, at ./src/rcl/publisher.c:389
+[tof_bridge] checking serial sensors
+[tof_bridge] starting
+[tof_bridge] checking serial sensors
+[tof_bridge] starting
+[tof_bridge] checking serial sensors
+[tof_bridge] starting
+[tof_bridge] checking serial sensors
+[tof_bridge] starting
+[INFO] [0946684839.138965639] [tof_bridge]: Reading /dev/ttyUSB0 as tof_front_left
+[INFO] [0946684839.164455315] [tof_bridge]: Reading /dev/ttyUSB1 as tof_front_right
+[tof_bridge] checking serial sensors
+[tof_bridge] WARN: expected /dev/ttyUSB0 and /dev/ttyUSB1, found:
+crw-rw---- 1 root dialout 188, 0 Aug 26  2025 /dev/ttyUSB0
+crw-rw---- 1 root dialout 188, 2 May  7 00:36 /dev/ttyUSB2
+[tof_bridge] checking serial sensors
+[tof_bridge] starting

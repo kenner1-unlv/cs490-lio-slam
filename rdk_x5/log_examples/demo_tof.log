@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/home/sunrise/tof_bridge.py", line 100, in <module>
+    main()
+  File "/home/sunrise/tof_bridge.py", line 94, in main
+    node = ToFBridge()
+  File "/home/sunrise/tof_bridge.py", line 26, in __init__
+    super().__init__("tof_bridge")
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/node.py", line 228, in __init__
+    self._parameter_service = ParameterService(self)
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/parameter_service.py", line 39, in __init__
+    node.create_service(
+  File "/opt/ros/humble/local/lib/python3.10/dist-packages/rclpy/node.py", line 1462, in create_service
+    service_impl = _rclpy.Service(
+rclpy._rclpy_pybind11.RCLError: failed to create service: rcl node's context is invalid, at ./src/rcl/node.c:428
