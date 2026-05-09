@@ -75,11 +75,10 @@ Useful NMEA sentences observed:
 
 Example parsed fix:
 
-- Latitude: 36.1372051
-- Longitude: -115.2195476
-- Altitude: 684.12 m
-- Satellites: 51
-- HDOP: 0.49
+- Latitude/Longitude: converted decimal GPS coordinates, intentionally omitted from documentation
+- Altitude: reported in meters
+- Satellites: observed high satellite count during outdoor/window testing
+- HDOP: observed sub-1.0 horizontal dilution of precision during testing
 
 ## UDP strategy
 
@@ -91,7 +90,7 @@ The ESP32 broadcasts converted GPS data over Wi-Fi UDP.
 
 Example packet:
 
-{"lat":36.1372051,"lon":-115.2195476,"alt":684.12,"sats":51,"hdop":0.49,"age_ms":322,"time":"20:15:03"}
+{"lat":"omitted","lon":"omitted","alt_m":684.12,"sats":51,"hdop":0.49,"age_ms":322,"time":"20:15:03"}
 
 The Jetson Orin can listen on UDP port 5005 and convert this into a ROS2 sensor_msgs/NavSatFix message.
 
