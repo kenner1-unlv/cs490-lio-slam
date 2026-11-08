@@ -1,6 +1,6 @@
-# Proposed NOVA20 shoulder sensor comparison
+# Proposed NOVA20 side-mount sensor comparison
 
-**Status: proposed, unpurchased and untested on OrinBot.** The present front-left and front-right shoulder modules each contain a camera, an ultrasonic sensor and a single-point ToF sensor. The existing bags record left/right ToF and ultrasonic topics; they do not demonstrate shoulder camera image recording or a NOVA20. This proposal keeps those baseline sensors and their topics in place while assessing whether a channelized near-field line helps characterize corners, low obstacles and ground discontinuities.
+**Status: proposed, unpurchased and untested on OrinBot.** The present front-left and front-right shoulder modules each contain a camera, an ultrasonic sensor and a single-point ToF sensor. The existing bags record left/right ToF and ultrasonic topics; they do not demonstrate shoulder camera image recording or a NOVA20. The forward OAK camera and its detections are an existing strength and remain in the design. This proposal concerns the **side mounts**: keep their baseline sensors and topics while assessing whether a channelized near-field line helps characterize corners, low obstacles and ground discontinuities. OAK detections can feed a future planner on the Orin, but planner behavior and spare compute headroom have not been measured here.
 
 ## Candidate and geometry
 
