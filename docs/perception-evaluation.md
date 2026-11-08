@@ -24,6 +24,8 @@ The [companion exporter](https://github.com/kenner1-unlv/Orinbot/blob/main/tools
 
 ## Existing short bag: measured diagnostic
 
+The [RViz vehicle-detection screenshot](assets/rviz-detections.png) shown on the README is a separate user-supplied visual capture. Its car/truck labels are not the chair/bed marker messages decoded from the short bag below, and no timestamp or ground-truth match has been established between them.
+
 Source: `rosbags/orinbot_integrated_20260507_124955`, recorded May 7, 2026. The checked-in `.db3` is a Git LFS object. Results below came from decoding that database with `tools/inspect_perception_bag.py` using `rosbags`, NumPy and SciPy. This is a 9.46-second integrated capture, not a controlled calibration run.
 
 - 113 Unitree L2 clouds, 36 OAK RGB-D clouds, 130 OAK RGB images, 146 OAK spatial detection messages, 108 visualization marker messages.
