@@ -38,6 +38,12 @@ The result was imperfect but real: a built robot with multiple edge devices publ
 | Mobile base and motor feedback | Four 500 W, 48 V-class hub motors with Flipsky 75100 V2 Pro VESCs | Movement reported by the team; four-motor telemetry appears in the bags. Tire scrub limited in-place steering; turning quality has not been measured in a controlled test. |
 | Motor command check | ROS 2 `/joy` to left/right RPM groups, UDP to ESP32, extended CAN to VESCs | [Bridge code](system_integration/ros_nodes/joystick_drivers/joy_to_vesc_udp.py), [ESP32 firmware](embedded/esp32_canbus_bridge/firmware/orinbot_esp32_canbus_bridge.ino), `/joy` and VESC feedback show the manual command path. Planner control was not implemented. |
 
+## Why the OAK 4 mattered
+
+The forward OAK 4 D Pro supplied more than RGB video. Its on-device stereo depth, spatial neural path and IMU produced RGB-D point clouds and detections that the Orin could consume alongside the Unitree L2 cloud. That gave us two complementary ways to inspect nearby geometry and objects in the same ROS 2 robot view, while keeping vision processing on the camera. The [preserved early-May OAK app manifest, YAML and pipeline](oak4-semester/README.md) show how the device published those streams; the May bag supplies the recorded topic evidence. Their co-visualization is demonstrated, while metric cross-sensor calibration and sustained operation under motion remain tests to do.
+
+The later [OAK 4 CV Playground](https://github.com/kenner1-unlv/Oak-4-CV-playground) grew from this work into a separate on-device CV lab with a sampled L2 browser preview. That later preview is uncalibrated and is not presented as a completed semester-era fusion system.
+
 The companion workspace also has an [OAK detection and tracklet exporter](https://github.com/kenner1-unlv/Orinbot/blob/main/tools/oak_detections_app/main.py) using DepthAI `SpatialDetectionNetwork` and `ObjectTracker`, with a [ROS 2 JSON wrapper](https://github.com/kenner1-unlv/Orinbot/blob/main/tools/oak_detections_app/oak_detections_node.py). That is relevant implementation work for distance-aware object tracking. The May bags reviewed here record `/oak/nn/spatial_detections` and `/spatial_bb`, **not** the wrapper's default `/oak/detections` JSON tracklet topic. Recorded tracker IDs and person tracks remain to be demonstrated.
 
 ## System paths
