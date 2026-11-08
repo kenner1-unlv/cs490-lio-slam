@@ -11,7 +11,8 @@ This inventory combines the completed-project reports, the hardware named in thi
 | Jetson Orin | Central ROS 2 integration, recording and experimental odometry | Distributed devices reduce its direct hardware IO, while adding network and clock complexity | Exact model, acquisition status and price |
 | Unitree L2 | 3D geometry and IMU for odometry and mapping experiments | Point cloud and IMU recorded; calibration and odometry accuracy remain open | Price and mount dimensions |
 | OAK 4-D Pro | On-device RGB-D and spatial inference | RGB, depth cloud and spatial markers recorded; person tracking and range accuracy remain unverified | Price, calibration data and mount measurements |
-| RDK X5 with front shoulder ToF/ultrasonic modules | Local sensor wiring and angled near-field coverage | Range topics recorded; coverage and obstacle stopping not validated | Sensor and board prices, printed-part materials |
+| RDK X5 with front shoulder camera, ToF and ultrasonic modules | Local image/range sensing and angled near-field coverage | ToF/ultrasonic topics recorded; shoulder image recording, coverage and obstacle stopping not validated by the reviewed bags | Sensor and board prices, printed-part materials |
+| Proposed NOVA20 line-array module(s) | Compare 20 channelized near-field distances with existing single-point returns, possibly in horizontal/vertical crossed orientations | [Comparison proposal](near-field-sensor-upgrade.md) only; no purchase, integration or drop-off result claimed | One-module sample/price, then four-module, connector, power and enclosure costs if the cross proves useful |
 | ESP32 CAN bridge, PoE/network hardware, printed housings | Modular communication and serviceable physical layout | Bridge and startup code preserved; network latency, power reliability and fit lack measured results | Board, switch, cable, filament and fabrication costs |
 
 ## The steering decision

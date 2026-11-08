@@ -12,7 +12,7 @@ The companion [Orinbot ROS 2 workspace](https://github.com/kenner1-unlv/Orinbot)
 | Motor control | ROS 2 `/joy` to left/right RPM groups, UDP to ESP32, extended CAN to VESCs | The [bridge code](system_integration/ros_nodes/joystick_drivers/joy_to_vesc_udp.py) and [ESP32 firmware](embedded/esp32_canbus_bridge/firmware/orinbot_esp32_canbus_bridge.ino) show the path; bags contain `/joy` and VESC feedback. The current code is **tank-style joystick control**, not a Nav2 `/cmd_vel` controller. |
 | Geometric perception | Unitree L2 point cloud and IMU | Recorded `/unilidar/cloud` and `/unilidar/imu` streams. |
 | Vision perception | OAK 4-D RGB, RGB-D cloud, IMU and spatial detections | Recorded image, point cloud, detection and visualization topics. The short bag contains chair and bed labels; it does not establish person tracking. |
-| Near-field sensing | Front-left and front-right ToF/ultrasonic modules, around 45 degrees | Range topics recorded; [RDK X5 bridges](rdk_x5/README.md) preserve the sensor-side implementation. |
+| Near-field sensing | Front-left and front-right shoulder heads, each with a camera, ultrasonic sensor and single-point ToF sensor, mounted around 45 degrees | ToF and ultrasonic topics recorded; [RDK X5 bridges](rdk_x5/README.md) preserve the range implementation. Shoulder image recording is not demonstrated by the five reviewed bags. |
 | Motion estimate | Experimental Point-LIO `/odom_corrected` | Topic appears, but counts vary dramatically between bags. No ground-truth accuracy or drift result is available. |
 
 The companion workspace also has an [OAK detection and tracklet exporter](https://github.com/kenner1-unlv/Orinbot/blob/main/tools/oak_detections_app/main.py) using DepthAI `SpatialDetectionNetwork` and `ObjectTracker`, with a [ROS 2 JSON wrapper](https://github.com/kenner1-unlv/Orinbot/blob/main/tools/oak_detections_app/oak_detections_node.py). That is relevant implementation work for distance-aware object tracking. The May bags reviewed here record `/oak/nn/spatial_detections` and `/spatial_bb`, **not** the wrapper's default `/oak/detections` JSON tracklet topic. Recorded tracker IDs and person tracks remain to be demonstrated.
@@ -74,6 +74,8 @@ The strongest outcome is therefore an **instrumented, joystick-driven robotics p
 5. Only after reliable motion and state estimation, implement and test a planner command interface, obstacle stopping, map reuse and waypoint navigation.
 6. For object or person tracking, record detection identity and range through time, compare against annotated video/ground truth, and report missed detections and identity switches. The current spatial-detection topics alone do not establish tracking.
 7. Compare the current LiDAR placement against a measured inverted mast mount, and prototype microphone-guided shoulder attention only after recording sound-direction, camera-pointing and ToF-range accuracy.
+
+A separate [NOVA20 shoulder comparison proposal](docs/near-field-sensor-upgrade.md) examines one 20-channel near-field line per orientation: a horizontal slice for corner/low-obstacle coverage and a vertical slice pitched toward the ground for drop-off observations. It would augment the current camera, ultrasonic and ToF sensors. The cross is a proposed measurement setup, not an installed sensor, dense depth image or validated safety feature.
 
 The [test protocol](docs/test-plan.md) defines the evidence needed for these claims.
 
