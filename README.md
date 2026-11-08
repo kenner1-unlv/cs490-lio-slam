@@ -16,6 +16,7 @@ The result was imperfect but real: a built robot with multiple edge devices publ
 | --- | --- | --- |
 | Architecture and component selection | Balanced cost, available parts, payload, power domains, network links and sensor roles | [Parts and engineering decisions](docs/parts-and-decisions.md) and the report's [architecture and wiring figures](docs/build-and-system-figures.md) |
 | Physical construction | Fabricated and fiber-laser welded the chassis, built the tray and panels, planned battery/cargo layout, and made the wiring harnesses | [Physical build and shoulder-module figures](docs/build-and-system-figures.md) |
+| Mount and enclosure iteration | Modeled and exported sensor, controller and network mounts as hardware positions and cable routes changed | [CAD and STL render gallery](docs/cad-and-mount-iteration.md) and the report's installed shoulder-module photo |
 | Distributed integration | Connected Jetson Orin, OAK 4-D, Unitree L2, RDK X5 shoulder sensors and ESP32/VESC control through ROS 2, Ethernet/PoE, UART, UDP and CAN | [Startup and bridge files](system_integration/README.md), [RDK X5 bridges](rdk_x5/README.md) and recorded topics |
 | Shared robot view and recordings | Added TF/robot description, RViz visualization, experimental Point-LIO output and integrated bags | [RViz figure](docs/build-and-system-figures.md#integrated-visualization), [bag inventory](docs/bag-evidence.md) and [perception measurements](docs/perception-evaluation.md) |
 | Evaluation | Identified what the bags prove, where timing and odometry need work, and why the fixed-wheel steering prevented autonomous route tests | [Evidence limits](docs/bag-evidence.md) and [next tests](docs/test-plan.md) |
@@ -58,6 +59,14 @@ We fabricated and fiber-laser welded the chassis, built the component tray and e
 ![Photograph from the final report showing the fabricated OrinBot body and panels](docs/assets/physical-platform.png)
 
 *Physical build stage, final report Figure 2. [Figure context and source](docs/build-and-system-figures.md#fabricated-platform).*
+
+The physical layout did not arrive fully solved. We used CAD to revise brackets and cases as sensor positions, component offsets and wiring clearance changed. The [STL render gallery](docs/cad-and-mount-iteration.md) shows LiDAR, camera, VESC, PoE and CAN mounting examples; the [report's shoulder-module pair](docs/build-and-system-figures.md#custom-shoulder-sensor-module) compares a CAD view with an installed prototype.
+
+| LiDAR mount export | Camera clip housing export |
+| --- | --- |
+| ![Rendered STL geometry for a LiDAR and camera mount](docs/assets/cad/lidar-camera-tube-mount.png) | ![Rendered STL geometry for a camera clip enclosure](docs/assets/cad/camera-clip-box.png) |
+
+*Renders of local STL exports. They illustrate design work; [source notes and other mounts](docs/cad-and-mount-iteration.md) distinguish the models from installed-part photos.*
 
 Cost and availability shaped the drive system: scooter-style hub motors were strong, durable and inexpensive relative to purpose-built robot drive pods. The Flipsky VESCs exposed motor telemetry useful for integration tests. The wheels carried the robot and it could turn, but the fixed four-wheel skid-steer layout produced too much tire scrub for the in-place turning we wanted. The joystick program sends independent RPM commands to left and right motor pairs; it has a dead zone, ramp and loss-of-input timeout. A two-wheel drive layout with passive casters, a suitable Ackermann steering design, or independently steered versions of the existing hub-motor pods are alternatives to test. [Parts and budget record](docs/parts-and-decisions.md) separates known components and design reasons from prices that still need invoices or a bill of materials.
 

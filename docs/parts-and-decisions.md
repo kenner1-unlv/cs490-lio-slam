@@ -4,6 +4,8 @@ This inventory combines the completed-project reports, the hardware named in thi
 
 The team assembled a system from commodity parts acquired under a semester schedule and limited budget, rather than starting with a unified robot kit. The consequential decisions were how to supply and protect both drive and compute power, route fusing and conversion, build serviceable harnesses, choose CAN/UART/Ethernet/PoE links and make the resulting devices intelligible to ROS 2. The [report wiring layout](build-and-system-figures.md#power-network-and-can-layout) records the architecture; the exact purchase totals and some connector-level details remain to be sourced.
 
+The [CAD and STL render gallery](cad-and-mount-iteration.md) shows on-the-fly mount and enclosure work for LiDAR, camera, VESC, PoE and CAN hardware. It is visual design evidence. The exact printed revision and measured installed offsets still need a fabrication log or matching build photos for each part.
+
 | Part or subsystem | Reason for selection | Tradeoff or result | Cost evidence needed |
 | --- | --- | --- | --- |
 | Fabricated chassis, component tray and exterior panels | Carry and protect the selected drive, compute, power and sensor layout | Team-built physical integration; dimensions, materials and measured fit have not yet been documented in this repo | Material invoices, fabrication consumables and drawings |
