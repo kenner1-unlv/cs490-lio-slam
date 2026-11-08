@@ -2,7 +2,12 @@
 
 OrinBot was a one-semester CS 490 independent study by a two-person team: one computer science student and one engineering student. We started with a robotics architecture and parts to select, then fabricated and assembled a robot and brought its distributed sensors, compute, motor telemetry and ROS 2 frames into one inspectable system. By the end of the semester, we could see LiDAR and RGB-D point clouds, spatial detections, near-field ranges, experimental odometry and the robot model together in RViz, and record them for offline analysis. The controller was one way to verify the motor path; the main project result was the integrated sensing and compute stack.
 
-The companion [Orinbot ROS 2 workspace](https://github.com/kenner1-unlv/Orinbot) contains the LiDAR and Point-LIO workspace and analysis scaffold. This repository holds project-specific startup, bridge and firmware files, recordings, and reproducible evidence review. It grew out of the [CS 490 evidence repository](https://github.com/kenner1-unlv/cs490-lio-slam); the original course report remains a source for the build history. Construction and integration were team work. Specific individual contributions should be credited from the team's records rather than inferred from a student's degree.
+The companion [Orinbot ROS 2 workspace](https://github.com/kenner1-unlv/Orinbot) contains the LiDAR and Point-LIO workspace and analysis scaffold. This repository holds project-specific startup, bridge and firmware files, recordings, and reproducible evidence review. It began as a CS 490 evidence package; the original course report remains a source for the build history. Construction and integration were team work. Specific individual contributions should be credited from the team's records rather than inferred from a student's degree.
+
+| Fabrication-stage robot | Perception in RViz |
+| --- | --- |
+| ![Isometric view of the unfinished fabricated OrinBot chassis](docs/assets/build-isometric-fabrication.png) | ![RViz point cloud with labeled detection boxes around vehicles](docs/assets/rviz-detections.png) |
+| Background simplified for presentation; weld cleanup and panel covering were underway. [Build photo gallery](docs/build-photo-gallery.md). | User-supplied RViz screenshot, copied unchanged. The boxes visualize detections; they are not an accuracy or tracking score. [Perception evidence](docs/perception-evaluation.md). |
 
 ## The engineering problem
 
@@ -56,9 +61,7 @@ The LiDAR and OAK clouds join a shared `base_link` TF graph for visualization an
 
 We fabricated and fiber-laser welded the chassis, built the component tray and exterior panels, and planned the cargo and battery layout together. We made and routed the power, CAN, PoE and network harnesses, then mounted the motors, computers and sensors. We designed and 3D-printed mounts and housings as placement changed. The L2 was positioned for broad 3D geometry, the OAK for forward RGB-D perception, and the angled shoulder modules for close corner coverage. The final report describes separate drive and regulated compute/sensor power domains, plus an isolated CAN interface. These choices let subsystems be tested separately. The [build and system figures](docs/build-and-system-figures.md) preserve the team's physical-build photo, architecture diagram, integrated power/network/CAN layout, shoulder-module CAD and installed prototype, and RViz evidence. Dimensions, connector-level schematics, fuse values and measured mounting offsets still need source records before this is a fully reproducible construction package.
 
-![Photograph from the final report showing the fabricated OrinBot body and panels](docs/assets/physical-platform.png)
-
-*Physical build stage, final report Figure 2. [Figure context and source](docs/build-and-system-figures.md#fabricated-platform).*
+The [unedited report photograph](docs/build-and-system-figures.md#fabricated-platform) and the [fabrication photo gallery](docs/build-photo-gallery.md) show the physical build at different stages. The gallery's simplified backgrounds are presentation edits; the unfinished metalwork remains part of the story.
 
 The physical layout did not arrive fully solved. We used CAD to revise brackets and cases as sensor positions, component offsets and wiring clearance changed. The [STL render gallery](docs/cad-and-mount-iteration.md) shows LiDAR, camera, VESC, PoE and CAN mounting examples; the [report's shoulder-module pair](docs/build-and-system-figures.md#custom-shoulder-sensor-module) compares a CAD view with an installed prototype.
 

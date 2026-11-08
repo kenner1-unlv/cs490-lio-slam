@@ -8,6 +8,8 @@ These figures were extracted unchanged from the team's May 2026 *Final Report Or
 
 *Report Figure 2, page 5.* Photograph of a physical build stage showing the chassis and exterior sheet-metal surfaces. It supports the team's account that the body was fabricated and assembled. It does not show every internal mount, electrical connection or final finish.
 
+Additional [fabrication-stage presentation photos](build-photo-gallery.md) have simplified backgrounds and are labeled as edited images.
+
 ## System architecture
 
 ![OrinBot block diagram linking shoulder sensors, Unitree L2, OAK 4-D, Jetson Orin, ESP32, VESCs and hub motors](assets/system-architecture.png)
