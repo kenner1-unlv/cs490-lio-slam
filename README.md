@@ -40,7 +40,7 @@ The result was imperfect but real: a built robot with multiple edge devices publ
 
 ## Why the OAK 4 mattered
 
-The forward OAK 4 D Pro supplied more than RGB video. Its on-device stereo depth, spatial neural path and IMU produced RGB-D point clouds and detections that the Orin could consume alongside the Unitree L2 cloud. That gave us two complementary ways to inspect nearby geometry and objects in the same ROS 2 robot view, while keeping vision processing on the camera. The [preserved early-May OAK app manifest, YAML and pipeline](oak4-semester/README.md) show how the device published those streams; the May bag supplies the recorded topic evidence. Their co-visualization is demonstrated, while metric cross-sensor calibration and sustained operation under motion remain tests to do.
+The forward OAK 4 D Pro supplied more than RGB video. Its on-device stereo depth, spatial neural path and IMU produced RGB-D point clouds and detections that the Orin could consume alongside the Unitree L2 cloud. That gave us two complementary ways to inspect nearby geometry and objects in the same ROS 2 robot view, while keeping vision processing on the camera. The [preserved early-May OAK app manifest, packaged YAML values and pipeline](oak4-semester/README.md) show how the device published those streams; the May bag supplies the recorded topic evidence. Their co-visualization is demonstrated, while metric cross-sensor calibration and sustained operation under motion remain tests to do.
 
 The later [OAK 4 CV Playground](https://github.com/kenner1-unlv/Oak-4-CV-playground) grew from this work into a separate on-device CV lab with a sampled L2 browser preview. That later preview is uncalibrated and is not presented as a completed semester-era fusion system.
 
