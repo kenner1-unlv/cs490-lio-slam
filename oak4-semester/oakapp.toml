@@ -1,0 +1,28 @@
+identifier = "example.apps.ros.driver-spatial-bb"
+app_version = "0.9.1"
+
+prepare_container = [
+    { type = "RUN", command = "apt-get update" },
+    { type = "RUN", command = "apt-get install -y ros-kilted-depthai-ros" }
+]
+
+prepare_build_container = []
+
+build_steps = []
+
+entrypoint = ["bash", "-lc", """
+source /opt/ros/kilted/setup.bash &&
+unset RMW_IMPLEMENTATION 2>/dev/null || true &&
+export RMW_IMPLEMENTATION=rmw_fastrtps_cpp &&
+echo "OAKAPP RMW forced to: $RMW_IMPLEMENTATION" &&
+ros2 launch depthai_filters spatial_bb.launch.py
+"""]
+
+[base_image]
+api_url = "https://registry-1.docker.io"
+service = "registry.docker.io"
+oauth_url = "https://auth.docker.io/token"
+auth_type = "repository"
+auth_name = "library/ros"
+image_name = "library/ros"
+image_tag = "kilted-ros-base"
