@@ -1,13 +1,13 @@
 # OrinBot: from concept to a robotics stack in one semester
 
-OrinBot was a one-semester CS 490 independent study by a two-person team: one computer science student and one engineering student. We started with a robotics architecture and parts to select, then fabricated and assembled a robot and brought its distributed sensors, compute, motor telemetry and ROS 2 frames into one inspectable system. By the end of the semester, we could see LiDAR and RGB-D point clouds, spatial detections, near-field ranges, experimental odometry and the robot model together in RViz, and record them for offline analysis. The controller was one way to verify the motor path; the main project result was the integrated sensing and compute stack.
-
-The companion [Orinbot ROS 2 workspace](https://github.com/kenner1-unlv/Orinbot) contains the LiDAR and Point-LIO workspace and analysis scaffold. This repository holds project-specific startup, bridge and firmware files, recordings, and reproducible evidence review. It began as a CS 490 evidence package; the original course report remains a source for the build history. Construction and integration were team work. Specific individual contributions should be credited from the team's records rather than inferred from a student's degree.
+One computer science student and one engineering student had a semester to turn off-the-shelf motors, sensors, batteries and computers into a working mobile robotics stack. We fabricated the chassis and mounts, built the power and data harnesses, and connected Jetson Orin, Unitree L2, OAK RGB-D, RDK X5 and motor telemetry through ROS 2. By semester's end, RViz and ROS 2 bag recordings showed multiple devices operating together. This is an evidence-backed account of the integration skills we learned while autonomous navigation remained future work.
 
 | Fabrication-stage robot | Perception in RViz |
 | --- | --- |
 | ![Isometric view of the unfinished fabricated OrinBot chassis](docs/assets/build-isometric-fabrication.png) | ![RViz point cloud with labeled detection boxes around vehicles](docs/assets/rviz-detections.png) |
 | Background simplified for presentation; weld cleanup and panel covering were underway. [Build photo gallery](docs/build-photo-gallery.md). | User-supplied RViz screenshot, copied unchanged. The boxes visualize detections; they are not an accuracy or tracking score. [Perception evidence](docs/perception-evaluation.md). |
+
+The companion [Orinbot ROS 2 workspace](https://github.com/kenner1-unlv/Orinbot) contains the LiDAR and Point-LIO workspace and analysis scaffold. This repository holds project-specific startup, bridge and firmware files, recordings, and reproducible evidence review. It began as a CS 490 evidence package; the original course report remains a source for the build history. Construction and integration were team work. Specific individual contributions should be credited from the team's records rather than inferred from a student's degree.
 
 ## The engineering problem
 
